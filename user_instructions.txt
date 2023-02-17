@@ -1,0 +1,11 @@
+General flow
+1. Copy & paste sample text for an entire section into secondary_script/input.txt
+2. Run python script secondary_script/string_magic.py from the secondary_script directory using command: python3 string_magic.py
+3. Run main python script from base directory in separate terminal using command: python3 JSR_prompt_builder.py
+4. Copy & paste from the string_magic.py terminal into JSR_prompt_builder.py terminal
+5. Provide the prompt with a section title for the associated copy/paste section
+6. Prompt & completion pairing get built and written to file "data.jsonl" on the back-end
+7. Repeat (don't have to repeat step 3 as it runs in a continuous loop until you kill it)
+
+Sections we will be skipping include: Artist Biography, Highlighted Achievements & Accomplishments, Roll-Out, Team, Live Performance Updates
+If a mistake is made you can manually modify the data.jsonl file accordingly.

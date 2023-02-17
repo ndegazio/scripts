@@ -1,0 +1,26 @@
+Purpose of script
+To build jsonl file with required parameters and structure for training & fine-tuning OpenAI base model.
+
+Prerequisites
+You will need to have python installed on your machine.
+Windows - https://learn.microsoft.com/en-us/windows/python/beginners
+MacOS - https://docs.python-guide.org/starting/install3/osx/
+Linux - https://docs.python-guide.org/starting/install3/linux/
+
+General limitations
+1. Command line - We cannot copy paste multiline content containing new lines into the command line or it will only read the first line.  I provided a secondary script (with examples and further instructions) to convert sections into a single line raw string for the command line.
+2. Encoding - There are some weird encoding things going on in some of the documents.  For example "ff" in "Jeffrey" is actually one character and it's encoded as "\ufb00" when we input the sample text.  I cannot pre-emptively account for every encoding edge case at this time - so if you see weird encodings like the one mentioned in the data.jsonl file, don't worry.  I will be massaging the data before submitting to OpenAI API.
+
+How to run the main script
+If on Windows, open Powershell
+If on MacOS, open Terminal
+If on Linux, open Command Line
+Navigate to the directory of the script using the following command:
+    cd /path/to/directory
+Run the following commmand:
+    python3 JSR_prompt_builder.py
+
+Secondary script - string_magic.py
+Use case: convert content to a single raw string that the command line will be able to use
+How to use: copy/paste content into input.txt, save.  Run: python3 string_magic.py from the command line (from secondary_script directory) and see the reformatted string printed to the terminal
+Examples:  I have provided an example input and output in the secondary_scripts directory string_magic_examples.txt
